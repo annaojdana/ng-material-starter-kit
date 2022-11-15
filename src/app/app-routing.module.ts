@@ -5,7 +5,7 @@ import { ProductListComponentModule } from './components/product-list/product-li
 import { ProductsServiceModule } from './services/products.service-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'product', component: ProductListComponent }]), ProductListComponentModule, ProductsServiceModule],
+  imports: [RouterModule.forRoot([{ path: 'products', component: ProductListComponent }]), ProductListComponentModule, ProductsServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
