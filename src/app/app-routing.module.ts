@@ -13,6 +13,7 @@ import { RegisterFormComponent } from './components/register-form/register-form.
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CatFactsComponent } from './components/cat-facts/cat-facts.component';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
+import { CartComponent } from './components/cart/cart.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -35,6 +36,8 @@ import { CatFactsComponentModule } from './components/cat-facts/cat-facts.compon
 import { CatFactsServiceModule } from './services/cat-facts.service-module';
 import { AgePredictionComponentModule } from './components/age-prediction/age-prediction.component-module';
 import { AgePredictionServiceModule } from './services/age-prediction.service-module';
+import { CartComponentModule } from './components/cart/cart.component-module';
+import { CartServiceModule } from './services/cart.service-module';
 
 @NgModule({
   imports: [
@@ -52,6 +55,7 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
       { path: 'product/:id', component: ProductDetailComponent },
       { path: 'cat-fact', component: CatFactsComponent },
       { path: 'age/:name', component: AgePredictionComponent },
+      { path: 'cart/:id', component: CartComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -75,7 +79,9 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
     CatFactsServiceModule,
     AgePredictionComponentModule,
     AgePredictionServiceModule,
+    CartComponentModule,
+    CartServiceModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
