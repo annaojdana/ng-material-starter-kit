@@ -1,0 +1,13 @@
+<div class='card shadow m-4 p-4'>
+  <ng-container *ngIf="data$ | async as item">
+    <h1>Nationalize name information. Chosen name:</h1>
+    <h2 style="text-transform: capitalize">{{item.name}}</h2>
+
+    <p>
+      <span style="text-transform: capitalize">{{item.name}}</span>
+      is found in {{item.country.length}} countries</p>
+    <ul *ngFor="let item of item.country" >
+      <li>Country id: {{item.country_id}}, probability: {{item.probability}}</li>
+    </ul>
+  </ng-container>
+</div>

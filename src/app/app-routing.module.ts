@@ -15,6 +15,7 @@ import { CatFactsComponent } from './components/cat-facts/cat-facts.component';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { CartComponent } from './components/cart/cart.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { NameNationalizeComponent } from './components/name-nationalize/name-nationalize.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -40,6 +41,8 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
 import { CartComponentModule } from './components/cart/cart.component-module';
 import { CartServiceModule } from './services/cart.service-module';
 import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
+import { NameNationalizeComponentModule } from './components/name-nationalize/name-nationalize.component-module';
+import { NameNationalizeServiceModule } from './services/name-nationalize.service-module';
 
 @NgModule({
   imports: [
@@ -58,7 +61,8 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
       { path: 'cat-fact', component: CatFactsComponent },
       { path: 'age/:name', component: AgePredictionComponent },
       { path: 'cart/:id', component: CartComponent },
-      { path: 'user/:id', component: UserDetailsComponent }
+      { path: 'user/:id', component: UserDetailsComponent },
+      { path: 'nationalize/:name', component: NameNationalizeComponent },
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -84,8 +88,10 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
     AgePredictionServiceModule,
     CartComponentModule,
     CartServiceModule,
-    UserDetailsComponentModule
+    UserDetailsComponentModule,
+    NameNationalizeComponentModule,
+    NameNationalizeServiceModule,
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

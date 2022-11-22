@@ -7,6 +7,7 @@
   },
   "layouts": {
     "card": "<mat-card><mat-card-title></mat-card-title><mat-card-content></mat-card-content></mat-card>",
+    "myCardLayout": " <div class='card shadow m-4 p-4'></div>",
     "toolbar": "<mat-toolbar color=\"primary\"></mat-toolbar>",
     "two-columns-grid": "<mat-grid-list cols=\"2\" rowHeight=\"2:1\">\n  <mat-grid-tile>Left</mat-grid-tile>\n  <mat-grid-tile>Right</mat-grid-tile>\n</mat-grid-list>",
     "stepper": "<mat-stepper #stepper>\n  <mat-step label=\"Step 1\">\n    <section>Step 2</section>\n    <div>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n  <mat-step label=\"Step 2\">\n    <section>Step 2</section>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n  <mat-step label=\"Done\">\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>",
@@ -85,9 +86,15 @@
     "text": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "{{ $itemVariable$ }}"
-    },"text-description": {
+    },
+    "text-description": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>$title$</h1>\n<p>$description$</p>"
+    },
+    "details-list": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<ul *ngFor=\"let $itemVariable$ of $itemVariable$\"><li>\n  {{$itemVariable$}}\n</li></ul>"
     }
   }
 }
+
