@@ -1,7 +1,5 @@
 <mat-card class="m-4 shadow bg-warning">
-  <mat-card-title class="h1">
-    Age prediction
-  </mat-card-title>
+  <mat-card-title class="h1"> Age prediction </mat-card-title>
   <mat-card-content>
     <ng-container *ngIf="data$ | async as item">{{ item.age }}</ng-container>
   </mat-card-content>

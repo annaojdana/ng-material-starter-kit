@@ -8,10 +8,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { RegisterFormComponent } from './register-form.component';
 
 @NgModule({
-  imports: [ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, MatButtonModule],
+  imports: [
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CommonModule,
+    MatButtonModule,
+  ],
   declarations: [RegisterFormComponent],
   providers: [],
-  exports: [RegisterFormComponent]
+  exports: [RegisterFormComponent],
 })
-export class RegisterFormComponentModule {
-}
+export class RegisterFormComponentModule {}

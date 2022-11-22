@@ -5,7 +5,6 @@ import { HolidaysService } from './holidays.service';
   imports: [],
   declarations: [],
   providers: [HolidaysService],
-  exports: []
+  exports: [],
 })
-export class HolidaysServiceModule {
-}
+export class HolidaysServiceModule {}

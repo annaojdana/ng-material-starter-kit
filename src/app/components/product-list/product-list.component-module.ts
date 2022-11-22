@@ -8,7 +8,6 @@ import { ProductListComponent } from './product-list.component';
   imports: [MatCardModule, MatListModule, CommonModule],
   declarations: [ProductListComponent],
   providers: [],
-  exports: [ProductListComponent]
+  exports: [ProductListComponent],
 })
-export class ProductListComponentModule {
-}
+export class ProductListComponentModule {}

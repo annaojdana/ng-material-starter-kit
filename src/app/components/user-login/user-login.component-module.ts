@@ -8,10 +8,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { UserLoginComponent } from './user-login.component';
 
 @NgModule({
-  imports: [ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, MatButtonModule],
+  imports: [
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CommonModule,
+    MatButtonModule,
+  ],
   declarations: [UserLoginComponent],
   providers: [],
-  exports: [UserLoginComponent]
+  exports: [UserLoginComponent],
 })
-export class UserLoginComponentModule {
-}
+export class UserLoginComponentModule {}

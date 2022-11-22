@@ -7,7 +7,6 @@ import { AgePredictionComponent } from './age-prediction.component';
   imports: [MatCardModule, CommonModule],
   declarations: [AgePredictionComponent],
   providers: [],
-  exports: [AgePredictionComponent]
+  exports: [AgePredictionComponent],
 })
-export class AgePredictionComponentModule {
-}
+export class AgePredictionComponentModule {}

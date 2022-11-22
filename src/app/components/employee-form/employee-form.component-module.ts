@@ -8,10 +8,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { EmployeeFormComponent } from './employee-form.component';
 
 @NgModule({
-  imports: [ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, MatButtonModule],
+  imports: [
+    ReactiveFormsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CommonModule,
+    MatButtonModule,
+  ],
   declarations: [EmployeeFormComponent],
   providers: [],
-  exports: [EmployeeFormComponent]
+  exports: [EmployeeFormComponent],
 })
-export class EmployeeFormComponentModule {
-}
+export class EmployeeFormComponentModule {}

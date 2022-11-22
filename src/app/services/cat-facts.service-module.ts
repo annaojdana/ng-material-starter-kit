@@ -5,7 +5,6 @@ import { CatFactsService } from './cat-facts.service';
   imports: [],
   declarations: [],
   providers: [CatFactsService],
-  exports: []
+  exports: [],
 })
-export class CatFactsServiceModule {
-}
+export class CatFactsServiceModule {}

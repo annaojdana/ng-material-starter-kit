@@ -5,7 +5,6 @@ import { AgePredictionService } from './age-prediction.service';
   imports: [],
   declarations: [],
   providers: [AgePredictionService],
-  exports: []
+  exports: [],
 })
-export class AgePredictionServiceModule {
-}
+export class AgePredictionServiceModule {}

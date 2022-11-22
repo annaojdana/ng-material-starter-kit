@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ViewEncapsulation,
+} from '@angular/core';
 import { Observable } from 'rxjs';
 import { CryptoModel } from '../../models/crypto.model';
 import { CryptosService } from '../../services/cryptos.service';
@@ -8,11 +12,10 @@ import { CryptosService } from '../../services/cryptos.service';
   styleUrls: ['./crypto-chips-list.component.scss'],
   templateUrl: './crypto-chips-list.component.html',
   encapsulation: ViewEncapsulation.Emulated,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CryptoChipsListComponent {
   readonly data$: Observable<CryptoModel[]> = this._cryptosService.getAll();
 
-  constructor(private _cryptosService: CryptosService) {
-  }
+  constructor(private _cryptosService: CryptosService) {}
 }

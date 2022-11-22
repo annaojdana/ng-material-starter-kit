@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PublicHolidaysComponent } from './public-holidays.component';
-import {AsyncPipe, NgForOf} from "@angular/common";
-import {MatCardModule} from "@angular/material/card";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatSelectModule} from "@angular/material/select";
+import { AsyncPipe, NgForOf } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   imports: [
@@ -11,11 +11,10 @@ import {MatSelectModule} from "@angular/material/select";
     MatCardModule,
     MatFormFieldModule,
     MatSelectModule,
-    AsyncPipe
+    AsyncPipe,
   ],
   declarations: [PublicHolidaysComponent],
   providers: [],
-  exports: [PublicHolidaysComponent]
+  exports: [PublicHolidaysComponent],
 })
-export class PublicHolidaysComponentModule {
-}
+export class PublicHolidaysComponentModule {}

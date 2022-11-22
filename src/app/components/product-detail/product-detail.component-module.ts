@@ -6,7 +6,6 @@ import { ProductDetailComponent } from './product-detail.component';
   imports: [CommonModule],
   declarations: [ProductDetailComponent],
   providers: [],
-  exports: [ProductDetailComponent]
+  exports: [ProductDetailComponent],
 })
-export class ProductDetailComponentModule {
-}
+export class ProductDetailComponentModule {}

@@ -7,7 +7,6 @@ import { CatFactsComponent } from './cat-facts.component';
   imports: [MatCardModule, CommonModule],
   declarations: [CatFactsComponent],
   providers: [],
-  exports: [CatFactsComponent]
+  exports: [CatFactsComponent],
 })
-export class CatFactsComponentModule {
-}
+export class CatFactsComponentModule {}

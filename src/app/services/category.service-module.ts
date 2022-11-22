@@ -5,7 +5,6 @@ import { CategoryService } from './category.service';
   imports: [],
   declarations: [],
   providers: [CategoryService],
-  exports: []
+  exports: [],
 })
-export class CategoryServiceModule {
-}
+export class CategoryServiceModule {}

@@ -8,7 +8,6 @@ import { MenuCategoryComponent } from './menu-category.component';
   imports: [MatButtonModule, MatMenuModule, CommonModule],
   declarations: [MenuCategoryComponent],
   providers: [],
-  exports: [MenuCategoryComponent]
+  exports: [MenuCategoryComponent],
 })
-export class MenuCategoryComponentModule {
-}
+export class MenuCategoryComponentModule {}

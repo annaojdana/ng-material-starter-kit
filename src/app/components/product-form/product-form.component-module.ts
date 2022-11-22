@@ -9,12 +9,19 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { ProductFormComponent } from './product-form.component';
 
-
 @NgModule({
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatListModule, CommonModule, MatSelectModule, MatOptionModule],
+  imports: [
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatListModule,
+    CommonModule,
+    MatSelectModule,
+    MatOptionModule,
+  ],
   declarations: [ProductFormComponent],
   providers: [],
-  exports: [ProductFormComponent]
+  exports: [ProductFormComponent],
 })
-export class ProductFormComponentModule {
-}
+export class ProductFormComponentModule {}

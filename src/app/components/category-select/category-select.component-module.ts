@@ -8,7 +8,6 @@ import { CategorySelectComponent } from './category-select.component';
   imports: [MatCardModule, MatListModule, CommonModule],
   declarations: [CategorySelectComponent],
   providers: [],
-  exports: [CategorySelectComponent]
+  exports: [CategorySelectComponent],
 })
-export class CategorySelectComponentModule {
-}
+export class CategorySelectComponentModule {}

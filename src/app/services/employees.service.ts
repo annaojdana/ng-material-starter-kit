@@ -5,10 +5,12 @@ import { EmployeeModel } from '../models/employee.model';
 
 @Injectable()
 export class EmployeesService {
-  constructor(private _httpClient: HttpClient) {
-  }
+  constructor(private _httpClient: HttpClient) {}
 
-  create(employee:Omit<EmployeeModel, 'id'>): Observable<EmployeeModel> {
-    return this._httpClient.post< EmployeeModel>('https://dummy.restapiexample.com/api/v1/create', employee);
+  create(employee: Omit<EmployeeModel, 'id'>): Observable<EmployeeModel> {
+    return this._httpClient.post<EmployeeModel>(
+      'https://dummy.restapiexample.com/api/v1/create',
+      employee
+    );
   }
 }

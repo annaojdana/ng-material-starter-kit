@@ -8,7 +8,6 @@ import { CategoryCheckboxComponent } from './category-checkbox.component';
   imports: [MatCardModule, MatCheckboxModule, CommonModule],
   declarations: [CategoryCheckboxComponent],
   providers: [],
-  exports: [CategoryCheckboxComponent]
+  exports: [CategoryCheckboxComponent],
 })
-export class CategoryCheckboxComponentModule {
-}
+export class CategoryCheckboxComponentModule {}

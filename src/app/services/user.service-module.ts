@@ -5,7 +5,6 @@ import { UserService } from './user.service';
   imports: [],
   declarations: [],
   providers: [UserService],
-  exports: []
+  exports: [],
 })
-export class UserServiceModule {
-}
+export class UserServiceModule {}

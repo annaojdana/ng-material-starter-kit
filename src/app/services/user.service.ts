@@ -5,10 +5,12 @@ import { UserModel } from '../models/user.model';
 
 @Injectable()
 export class UserService {
-  constructor(private _httpClient: HttpClient) {
-  }
+  constructor(private _httpClient: HttpClient) {}
 
-  create(user: Omit<UserModel,'id'>): Observable<UserModel> {
-    return this._httpClient.post<UserModel>('https://fakestoreapi.com/auth/login', user);
+  create(user: Omit<UserModel, 'id'>): Observable<UserModel> {
+    return this._httpClient.post<UserModel>(
+      'https://fakestoreapi.com/auth/login',
+      user
+    );
   }
 }

@@ -37,8 +37,8 @@ import { AgePredictionComponentModule } from './components/age-prediction/age-pr
 import { AgePredictionServiceModule } from './services/age-prediction.service-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot(
-    [
+  imports: [
+    RouterModule.forRoot([
       { path: 'products', component: ProductListComponent },
       { path: 'categories', component: CategorySelectComponent },
       { path: 'crypto', component: CryptoChipsListComponent },
@@ -51,8 +51,31 @@ import { AgePredictionServiceModule } from './services/age-prediction.service-mo
       { path: 'register', component: RegisterFormComponent },
       { path: 'product/:id', component: ProductDetailComponent },
       { path: 'cat-fact', component: CatFactsComponent },
-      { path: 'age/:name', component: AgePredictionComponent }
-    ]), ProductListComponentModule, ProductsServiceModule, CategorySelectComponentModule, CategoryServiceModule, CryptoChipsListComponentModule, CryptosServiceModule, PublicHolidaysComponentModule, HolidaysServiceModule, CategoryCheckboxComponentModule, MenuCategoryComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, UserLoginComponentModule, UserServiceModule, RegisterFormComponentModule, NewUserServiceModule, ProductDetailComponentModule, CatFactsComponentModule, CatFactsServiceModule, AgePredictionComponentModule, AgePredictionServiceModule],
-  exports: [RouterModule]
+      { path: 'age/:name', component: AgePredictionComponent },
+    ]),
+    ProductListComponentModule,
+    ProductsServiceModule,
+    CategorySelectComponentModule,
+    CategoryServiceModule,
+    CryptoChipsListComponentModule,
+    CryptosServiceModule,
+    PublicHolidaysComponentModule,
+    HolidaysServiceModule,
+    CategoryCheckboxComponentModule,
+    MenuCategoryComponentModule,
+    ProductFormComponentModule,
+    EmployeeFormComponentModule,
+    EmployeesServiceModule,
+    UserLoginComponentModule,
+    UserServiceModule,
+    RegisterFormComponentModule,
+    NewUserServiceModule,
+    ProductDetailComponentModule,
+    CatFactsComponentModule,
+    CatFactsServiceModule,
+    AgePredictionComponentModule,
+    AgePredictionServiceModule,
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

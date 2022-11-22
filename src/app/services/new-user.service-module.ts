@@ -5,7 +5,6 @@ import { NewUserService } from './new-user.service';
   imports: [],
   declarations: [],
   providers: [NewUserService],
-  exports: []
+  exports: [],
 })
-export class NewUserServiceModule {
-}
+export class NewUserServiceModule {}
