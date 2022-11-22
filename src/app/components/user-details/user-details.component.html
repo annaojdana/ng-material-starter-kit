@@ -1,0 +1,11 @@
+<mat-card class="card shadow m-4 p-4 bg-secondary text-light">
+  <mat-card-title>
+    User details
+  </mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="data$ | async as item">
+      <h2 style="text-transform: capitalize">{{item.name.firstname}} {{item.name.lastname}}</h2>
+      <p>{{ item.email }}</p>
+    </ng-container>
+    </mat-card-content>
+</mat-card>

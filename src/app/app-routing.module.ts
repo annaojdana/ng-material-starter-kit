@@ -14,6 +14,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { CatFactsComponent } from './components/cat-facts/cat-facts.component';
 import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { CartComponent } from './components/cart/cart.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -38,6 +39,7 @@ import { AgePredictionComponentModule } from './components/age-prediction/age-pr
 import { AgePredictionServiceModule } from './services/age-prediction.service-module';
 import { CartComponentModule } from './components/cart/cart.component-module';
 import { CartServiceModule } from './services/cart.service-module';
+import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
 
 @NgModule({
   imports: [
@@ -55,7 +57,8 @@ import { CartServiceModule } from './services/cart.service-module';
       { path: 'product/:id', component: ProductDetailComponent },
       { path: 'cat-fact', component: CatFactsComponent },
       { path: 'age/:name', component: AgePredictionComponent },
-      { path: 'cart/:id', component: CartComponent }
+      { path: 'cart/:id', component: CartComponent },
+      { path: 'user/:id', component: UserDetailsComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -80,7 +83,8 @@ import { CartServiceModule } from './services/cart.service-module';
     AgePredictionComponentModule,
     AgePredictionServiceModule,
     CartComponentModule,
-    CartServiceModule
+    CartServiceModule,
+    UserDetailsComponentModule
   ],
   exports: [RouterModule],
 })
