@@ -1,0 +1,6 @@
+<ng-container  *ngIf="fact$ | async as item">
+ <div class="container-fluid p-4 bg-success mt-5 text-light" style="width: 90%">
+  <h1 class="h1">Cat facts</h1>
+  <p>{{item.fact}}</p>
+ </div>
+</ng-container>
