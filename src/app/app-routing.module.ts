@@ -12,6 +12,7 @@ import { UserLoginComponent } from './components/user-login/user-login.component
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CatFactsComponent } from './components/cat-facts/cat-facts.component';
+import { AgePredictionComponent } from './components/age-prediction/age-prediction.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -32,6 +33,8 @@ import { NewUserServiceModule } from './services/new-user.service-module';
 import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
 import { CatFactsComponentModule } from './components/cat-facts/cat-facts.component-module';
 import { CatFactsServiceModule } from './services/cat-facts.service-module';
+import { AgePredictionComponentModule } from './components/age-prediction/age-prediction.component-module';
+import { AgePredictionServiceModule } from './services/age-prediction.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot(
@@ -47,8 +50,9 @@ import { CatFactsServiceModule } from './services/cat-facts.service-module';
       { path: 'login', component: UserLoginComponent },
       { path: 'register', component: RegisterFormComponent },
       { path: 'product/:id', component: ProductDetailComponent },
-      { path: 'cat-fact', component: CatFactsComponent }
-    ]), ProductListComponentModule, ProductsServiceModule, CategorySelectComponentModule, CategoryServiceModule, CryptoChipsListComponentModule, CryptosServiceModule, PublicHolidaysComponentModule, HolidaysServiceModule, CategoryCheckboxComponentModule, MenuCategoryComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, UserLoginComponentModule, UserServiceModule, RegisterFormComponentModule, NewUserServiceModule, ProductDetailComponentModule, CatFactsComponentModule, CatFactsServiceModule],
+      { path: 'cat-fact', component: CatFactsComponent },
+      { path: 'age/:name', component: AgePredictionComponent }
+    ]), ProductListComponentModule, ProductsServiceModule, CategorySelectComponentModule, CategoryServiceModule, CryptoChipsListComponentModule, CryptosServiceModule, PublicHolidaysComponentModule, HolidaysServiceModule, CategoryCheckboxComponentModule, MenuCategoryComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, UserLoginComponentModule, UserServiceModule, RegisterFormComponentModule, NewUserServiceModule, ProductDetailComponentModule, CatFactsComponentModule, CatFactsServiceModule, AgePredictionComponentModule, AgePredictionServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
