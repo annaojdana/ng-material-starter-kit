@@ -17,6 +17,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { NameNationalizeComponent } from './components/name-nationalize/name-nationalize.component';
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
+import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -45,6 +46,7 @@ import { UserDetailsComponentModule } from './components/user-details/user-detai
 import { NameNationalizeComponentModule } from './components/name-nationalize/name-nationalize.component-module';
 import { NameNationalizeServiceModule } from './services/name-nationalize.service-module';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
+import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
 
 @NgModule({
   imports: [
@@ -66,6 +68,7 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
       { path: 'user/:id', component: UserDetailsComponent },
       { path: 'nationalize/:name', component: NameNationalizeComponent },
       { path: 'products/:category', component: FilteredProductListComponent },
+      { path: 'products-order', component: SortedProductListComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -95,7 +98,8 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
     NameNationalizeComponentModule,
     NameNationalizeServiceModule,
     FilteredProductListComponentModule,
+    SortedProductListComponentModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
