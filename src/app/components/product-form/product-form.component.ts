@@ -24,8 +24,7 @@ export class ProductFormComponent {
     image: new FormControl(),
     category: new FormControl(),
   });
-  readonly categoryList$: Observable<ProductModel[]> =
-    this._categoryService.getAll();
+  readonly categoryList$: Observable<string[]> = this._categoryService.getAll();
 
   constructor(
     private _productsService: ProductsService,

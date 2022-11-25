@@ -16,6 +16,7 @@ import { AgePredictionComponent } from './components/age-prediction/age-predicti
 import { CartComponent } from './components/cart/cart.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { NameNationalizeComponent } from './components/name-nationalize/name-nationalize.component';
+import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -43,6 +44,7 @@ import { CartServiceModule } from './services/cart.service-module';
 import { UserDetailsComponentModule } from './components/user-details/user-details.component-module';
 import { NameNationalizeComponentModule } from './components/name-nationalize/name-nationalize.component-module';
 import { NameNationalizeServiceModule } from './services/name-nationalize.service-module';
+import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 
 @NgModule({
   imports: [
@@ -63,6 +65,7 @@ import { NameNationalizeServiceModule } from './services/name-nationalize.servic
       { path: 'cart/:id', component: CartComponent },
       { path: 'user/:id', component: UserDetailsComponent },
       { path: 'nationalize/:name', component: NameNationalizeComponent },
+      { path: 'products/:category', component: FilteredProductListComponent },
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -91,6 +94,7 @@ import { NameNationalizeServiceModule } from './services/name-nationalize.servic
     UserDetailsComponentModule,
     NameNationalizeComponentModule,
     NameNationalizeServiceModule,
+    FilteredProductListComponentModule,
   ],
   exports: [RouterModule],
 })
