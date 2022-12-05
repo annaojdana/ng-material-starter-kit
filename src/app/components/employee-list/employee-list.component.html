@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title>Order by salary</mat-card-title>
+  <mat-card-content>
+
+    <mat-selection-list role="list" fxLayout="row" [multiple]="false">
+      <mat-list-option (click)="sort(item)" *ngFor="let item of orders | async" [value]="item" role="listoption">
+        {{item}}
+      </mat-list-option>
+    </mat-selection-list>
+    <mat-selection-list role="list" fxLayout="row" [multiple]="false">
+      <mat-list-option (click)="selectAge(item)" *ngFor="let item of ages | async" [value]="item" role="listoption">
+        {{item}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+</mat-card>
+<div class='card shadow m-4 p-4'>
+  <h1>Employee</h1>
+  <mat-list role="list">
+    <mat-list-item class='gap-4' role="listitem" *ngFor="let item of employee$ | async">
+      <p style="width:250px">{{item.employee_name}}</p>
+      <p style="width: 100px"> age: {{item.employee_age}}</p>
+      <p style="width: 200px"> salary: {{item.employee_salary}}$</p>
+    </mat-list-item>
+  </mat-list>
+</div>

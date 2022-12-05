@@ -7,7 +7,6 @@ import { PublicHolidaysComponent } from './components/public-holidays/public-hol
 import { CategoryCheckboxComponent } from './components/category-checkbox/category-checkbox.component';
 import { MenuCategoryComponent } from './components/menu-category/menu-category.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
-import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
@@ -18,6 +17,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { NameNationalizeComponent } from './components/name-nationalize/name-nationalize.component';
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -29,8 +29,6 @@ import { HolidaysServiceModule } from './services/holidays.service-module';
 import { CategoryCheckboxComponentModule } from './components/category-checkbox/category-checkbox.component-module';
 import { MenuCategoryComponentModule } from './components/menu-category/menu-category.component-module';
 import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
-import { EmployeeFormComponentModule } from './components/employee-form/employee-form.component-module';
-import { EmployeesServiceModule } from './services/employees.service-module';
 import { UserLoginComponentModule } from './components/user-login/user-login.component-module';
 import { UserServiceModule } from './services/user.service-module';
 import { RegisterFormComponentModule } from './components/register-form/register-form.component-module';
@@ -47,6 +45,8 @@ import { NameNationalizeComponentModule } from './components/name-nationalize/na
 import { NameNationalizeServiceModule } from './services/name-nationalize.service-module';
 import { FilteredProductListComponentModule } from './components/filtered-product-list/filtered-product-list.component-module';
 import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
+import { EmployeeListComponentModule } from './components/employee-list/employee-list.component-module';
+import { EmployeeServiceModule } from './services/employee.service-module';
 
 @NgModule({
   imports: [
@@ -58,7 +58,6 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
       { path: 'checkbox-categories', component: CategoryCheckboxComponent },
       { path: 'categories-menu', component: MenuCategoryComponent },
       { path: 'create-product', component: ProductFormComponent },
-      { path: 'create-employee', component: EmployeeFormComponent },
       { path: 'login', component: UserLoginComponent },
       { path: 'register', component: RegisterFormComponent },
       { path: 'product/:id', component: ProductDetailComponent },
@@ -67,8 +66,9 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
       { path: 'cart/:id', component: CartComponent },
       { path: 'user/:id', component: UserDetailsComponent },
       { path: 'nationalize/:name', component: NameNationalizeComponent },
-      { path: 'products/:category', component: FilteredProductListComponent },
-      { path: 'products-order', component: SortedProductListComponent }
+      { path: 'filtered-products', component: FilteredProductListComponent },
+      { path: 'sorted-products', component: SortedProductListComponent },
+      { path: 'employees', component: EmployeeListComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -81,8 +81,6 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
     CategoryCheckboxComponentModule,
     MenuCategoryComponentModule,
     ProductFormComponentModule,
-    EmployeeFormComponentModule,
-    EmployeesServiceModule,
     UserLoginComponentModule,
     UserServiceModule,
     RegisterFormComponentModule,
@@ -98,7 +96,9 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
     NameNationalizeComponentModule,
     NameNationalizeServiceModule,
     FilteredProductListComponentModule,
-    SortedProductListComponentModule
+    SortedProductListComponentModule,
+    EmployeeListComponentModule,
+    EmployeeServiceModule
   ],
   exports: [RouterModule],
 })

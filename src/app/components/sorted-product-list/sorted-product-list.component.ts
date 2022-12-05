@@ -6,7 +6,6 @@ import {
 import { BehaviorSubject, combineLatest, map, Observable, of } from 'rxjs';
 import { ProductModel } from '../../models/product.model';
 import { ProductsService } from '../../services/products.service';
-import { Params } from '@angular/router';
 
 @Component({
   selector: 'app-sorted-product-list',
