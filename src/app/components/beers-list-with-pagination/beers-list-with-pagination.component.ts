@@ -3,7 +3,7 @@ import {
   Component,
   ViewEncapsulation,
 } from '@angular/core';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { BeersModel } from '../../models/beers.model';
 import { BeersService } from '../../services/beers.service';
 import { PageEvent } from '@angular/material/paginator';
