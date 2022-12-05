@@ -18,6 +18,7 @@ import { NameNationalizeComponent } from './components/name-nationalize/name-nat
 import { FilteredProductListComponent } from './components/filtered-product-list/filtered-product-list.component';
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { BeersListWithPaginationComponent } from './components/beers-list-with-pagination/beers-list-with-pagination.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -47,6 +48,8 @@ import { FilteredProductListComponentModule } from './components/filtered-produc
 import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
 import { EmployeeListComponentModule } from './components/employee-list/employee-list.component-module';
 import { EmployeeServiceModule } from './services/employee.service-module';
+import { BeersListWithPaginationComponentModule } from './components/beers-list-with-pagination/beers-list-with-pagination.component-module';
+import { BeersServiceModule } from './services/beers.service-module';
 
 @NgModule({
   imports: [
@@ -68,7 +71,8 @@ import { EmployeeServiceModule } from './services/employee.service-module';
       { path: 'nationalize/:name', component: NameNationalizeComponent },
       { path: 'filtered-products', component: FilteredProductListComponent },
       { path: 'sorted-products', component: SortedProductListComponent },
-      { path: 'employees', component: EmployeeListComponent }
+      { path: 'employees', component: EmployeeListComponent },
+      { path: 'beers', component: BeersListWithPaginationComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -98,7 +102,9 @@ import { EmployeeServiceModule } from './services/employee.service-module';
     FilteredProductListComponentModule,
     SortedProductListComponentModule,
     EmployeeListComponentModule,
-    EmployeeServiceModule
+    EmployeeServiceModule,
+    BeersListWithPaginationComponentModule,
+    BeersServiceModule
   ],
   exports: [RouterModule],
 })
