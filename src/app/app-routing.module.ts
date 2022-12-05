@@ -19,6 +19,7 @@ import { FilteredProductListComponent } from './components/filtered-product-list
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { BeersListWithPaginationComponent } from './components/beers-list-with-pagination/beers-list-with-pagination.component';
+import { RefreshedEmployeesListComponent } from './components/refreshed-employees-list/refreshed-employees-list.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategorySelectComponentModule } from './components/category-select/category-select.component-module';
@@ -50,6 +51,7 @@ import { EmployeeListComponentModule } from './components/employee-list/employee
 import { EmployeeServiceModule } from './services/employee.service-module';
 import { BeersListWithPaginationComponentModule } from './components/beers-list-with-pagination/beers-list-with-pagination.component-module';
 import { BeersServiceModule } from './services/beers.service-module';
+import { RefreshedEmployeesListComponentModule } from './components/refreshed-employees-list/refreshed-employees-list.component-module';
 
 @NgModule({
   imports: [
@@ -72,7 +74,8 @@ import { BeersServiceModule } from './services/beers.service-module';
       { path: 'filtered-products', component: FilteredProductListComponent },
       { path: 'sorted-products', component: SortedProductListComponent },
       { path: 'employees', component: EmployeeListComponent },
-      { path: 'beers', component: BeersListWithPaginationComponent }
+      { path: 'beers', component: BeersListWithPaginationComponent },
+      { path: 'refresh-employees', component: RefreshedEmployeesListComponent }
     ]),
     ProductListComponentModule,
     ProductsServiceModule,
@@ -104,7 +107,8 @@ import { BeersServiceModule } from './services/beers.service-module';
     EmployeeListComponentModule,
     EmployeeServiceModule,
     BeersListWithPaginationComponentModule,
-    BeersServiceModule
+    BeersServiceModule,
+    RefreshedEmployeesListComponentModule
   ],
   exports: [RouterModule],
 })

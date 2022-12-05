@@ -1,0 +1,9 @@
+<div class='card shadow m-4 p-4'>
+  <h1>Employees List</h1>
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of refreshedList$ | async">{{item.employee_name}}
+      <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" (click)="delete(item.id)">
+        <mat-icon>delete</mat-icon>
+      </button></mat-list-item>
+  </mat-list>
+</div>

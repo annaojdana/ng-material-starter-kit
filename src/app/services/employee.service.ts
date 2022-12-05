@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { EmployeeModel } from '../models/employee.model';
 import { ApiResponse } from './api.response';
 
@@ -18,5 +19,11 @@ export class EmployeeService {
           return response.data;
         })
       );
+  }
+
+  delete(id: number): Observable<EmployeeModel> {
+    return this._httpClient.delete<EmployeeModel>(
+      `https://dummy.restapiexample.com/public/api/v1/delete/${id}`
+    );
   }
 }
